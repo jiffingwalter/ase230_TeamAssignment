@@ -5,9 +5,20 @@ $members=[
 		'name'=>'Justin Walter',
 		'role'=>'Intern Programmer',
 		'profile_picture'=>'./assets/images/profile_justinwalter.jpg',
-		'email'=>'',
-		'work_experience'=>'',
-		'education'=>'',
+		'email'=>'walterj5@mymail.nku.edu',
+		'summary'=>'My name is Justin Walter and I\'m an NKU senior going for a major in CIT and a minor in Media Informatics. I like to play video games, hike, work out, climb, draw. I\'m currently interning at Great American insurance for my first internship as a programmer.',
+		'linkedin_link'=>'https://www.linkedin.com/in/justin-walter-b0a804244/',
+		'github_link'=>'https://github.com/jiffingwalter',
+		'website_link'=>'',
+		'work_experience'=>[
+
+		],
+		'education'=>[
+
+			'edu_degree'=>'Associate of Arts',
+			'edu_college'=>'Gateway Community & Technical College',
+			'edu_date'=>'2017-2020',
+		],
 		'skills'=>'',
 		'awards'=>'',
 		'languages'=>'',
@@ -20,6 +31,7 @@ $members=[
 		'role'=>'Intern Programmer',
 		'profile_picture'=>'./assets/images/profile_brycebien.jpg',
 		'email'=>'brycebien@gmail.com',
+		'summary'=>'',
 		'work_experience'=>'',
 		'education'=>'',
 		'skills'=>'',

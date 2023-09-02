@@ -67,7 +67,7 @@ $members=[
 								</div><!--//row-->
 							</div><!--//col-->
 							</div><!--//row-->
-							</header>';	
+							</header><br>';	
 					}
 					?>
 
