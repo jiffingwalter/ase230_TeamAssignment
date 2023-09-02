@@ -1,11 +1,41 @@
 <?php
+$index=$_GET['index'];
+$members=[
+	[
+		'name'=>'Justin Walter',
+		'role'=>'Intern Programmer',
+		'profile_picture'=>'./assets/images/profile_justinwalter.jpg',
+		'email'=>'',
+		'work_experience'=>'',
+		'education'=>'',
+		'skills'=>'',
+		'awards'=>'',
+		'languages'=>'',
+		'interests'=>'',
+		'projects'=>''
 
+	],
+	[
+		'name'=>'Bryce Bien',
+		'role'=>'Intern Programmer',
+		'profile_picture'=>'./assets/images/profile_brycebien.jpg',
+		'email'=>'brycebien@gmail.com',
+		'work_experience'=>'',
+		'education'=>'',
+		'skills'=>'',
+		'awards'=>'',
+		'languages'=>'',
+		'interests'=>'',
+		'projects'=>''
+
+	],
+];
 
 ?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Your name's Resume</title>
+    <title><?php echo $members[$index]['name'].'\'s Resume';?></title>
     
     <!-- Meta -->
     <meta charset="utf-8">
@@ -40,8 +70,8 @@
 				    <div class="col">
 					    <div class="row p-4 justify-content-center justify-content-md-between">
 						    <div class="primary-info col-auto">
-							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Your name</h1>
-							    <div class="title mb-3">Your desired job title</div>
+							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?php echo $members[$index]['name'];?></h1>
+							    <div class="title mb-3"><?php echo $members[$index]['role'];?></div>
 							    <ul class="list-unstyled">
 								    <li class="mb-2"><a class="text-link" href="#"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-3"></i>your@email.com</a></li>
 								    <li><a class="text-link" href="#"><i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"></i>0123 456 78900</a></li>
