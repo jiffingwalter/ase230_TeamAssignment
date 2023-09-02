@@ -5,13 +5,13 @@ $members=[
 	[
 		'name'=>'Justin Walter',
 		'role'=>'Intern Programmer',
-		'profile_picture'=>'profile_justinwalter.jpg',
+		'profile_picture'=>'./assets/images/profile_justinwalter.jpg',
 		'link'=>'/JUSTIN_WALTER.php'
 	],
 	[
 		'name'=>'Bryce Bien',
 		'role'=>'Intern Programmer',
-		'profile_picture'=>'profile_default.jpg',
+		'profile_picture'=>'./assets/images/profile_brycebien.jpg',
 		'link'=>'BRYCE_BIEN.php'
 	],
 ];
@@ -45,74 +45,35 @@ $members=[
 <body>
     <article class="resume-wrapper text-center position-relative">
 	    <div class="resume-wrapper-inner mx-auto text-start bg-white shadow-lg">
-			<h1 class="py-4 text-center">OUR AMAZING TEAM</h1>
-		    <header class="resume-header pt-4 pt-md-0">
-			    <div class="row">
-				    <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-				        <img class="picture" src=<?= "assets/images/", $members[0]['profile_picture'] ?> alt="">
-				    </div><!--//col-->
-				    <div class="col">
-					    <div class="row p-4 justify-content-center justify-content-md-between">
-						    <div class="primary-info col-auto">
-							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?= $members[0]['name'] ?></h1>
-							    <div class="title mb-3"><?= $members[0]['role'] ?></div>
-								<a href="#<?= $members[0]['link'] ?>" class="btn btn-secondary">See full profile</a>
-						    </div><!--//primary-info-->
-						    <div class="secondary-info col-auto mt-2">
-						    </div><!--//secondary-info-->
-					    </div><!--//row-->
-					    
-				    </div><!--//col-->
-			    </div><!--//row-->
-		    </header>
+		<h1 class="py-4 text-center">OUR AMAZING TEAM</h1>
+			<?php 
 		    
-		    <header class="resume-header mt-4 pt-4 pt-md-0">
-			    <div class="row">
-				    <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-				        <img class="picture" src="assets/images/profile.jpg" alt="">
-				    </div><!--//col-->
-				    <div class="col">
-					    <div class="row p-4 justify-content-center justify-content-md-between">
-						    <div class="primary-info col-auto">
-							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Member 2 name</h1>
-							    <div class="title mb-3">Member 2 role</div>
-								<a href="#<?php /*LINK_TO_MEMBER_2_PAGE*/ ?>" class="btn btn-secondary">See full profile</a>
-						    </div><!--//primary-info-->
-						    <div class="secondary-info col-auto mt-2">
-						    </div><!--//secondary-info-->
-					    </div><!--//row-->
-					    
-				    </div><!--//col-->
-			    </div><!--//row-->
-		    </header>
-		    
-		    <header class="resume-header mt-4 pt-4 pt-md-0">
-			    <div class="row">
-				    <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-				        <img class="picture" src="assets/images/profile.jpg" alt="">
-				    </div><!--//col-->
-				    <div class="col">
-					    <div class="row p-4 justify-content-center justify-content-md-between">
-						    <div class="primary-info col-auto">
-							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Member 3 name</h1>
-							    <div class="title mb-3">Member 3 role</div>
-								<a href="#<?php /*LINK_TO_MEMBER_3_PAGE*/ ?>" class="btn btn-secondary">See full profile</a>
-						    </div><!--//primary-info-->
-						    <div class="secondary-info col-auto mt-2">
-						    </div><!--//secondary-info-->
-					    </div><!--//row-->
-					    
-				    </div><!--//col-->
-			    </div><!--//row-->
-		    </header>
-		    
-	    </div>
-    </article> 
+							for($i=0;$i<count($members);$i++){
+							echo 
+							'<header class="resume-header pt-4 pt-md-0">
+							<div class="row">
+								<div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
+									<img class="picture" src="'.$members[$i]['profile_picture'].'" alt="" height="220px">
+								</div>
+							<!--//col-->
+							<div class="col">
+								<div class="row p-4 justify-content-center justify-content-md-between">
+									<div class="primary-info col-auto">
+										<h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">'.$members[$i]['name'].'</h1>
+											<div class="title mb-3">'.$members[$i]['role'].'</div>
+										<a href="detail.php?index='.$i.'" class="btn btn-secondary">See full profile</a>
+									</div><!--//primary-info-->
+										<div class="secondary-info col-auto mt-2"></div><!--//secondary-info-->
+								</div><!--//row-->
+							</div><!--//col-->
+							</div><!--//row-->
+							</header>';	
+					}
+					?>
 
-    
     <footer class="footer text-center pt-2 pb-5">
 	    <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-        <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by Your names</small>
+        <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by Bryce Bien and Justin Walker</small>
     </footer>
 
     
