@@ -1,45 +1,115 @@
 <?php
 $index=$_GET['index'];
+
+# if statement here to choose which member to display based on the number given in the GET variable?
+
 $members=[
-	[
+	[ # member 1 -- justin
 		'name'=>'Justin Walter',
 		'role'=>'Intern Programmer',
 		'profile_picture'=>'./assets/images/profile_justinwalter.jpg',
 		'email'=>'walterj5@mymail.nku.edu',
-		'summary'=>'My name is Justin Walter and I\'m an NKU senior going for a major in CIT and a minor in Media Informatics. I like to play video games, hike, work out, climb, draw. I\'m currently interning at Great American insurance for my first internship as a programmer.',
 		'linkedin_link'=>'https://www.linkedin.com/in/justin-walter-b0a804244/',
-		'github_link'=>'https://github.com/jiffingwalter',
-		'website_link'=>'',
+		'github_link'=>'https://github.com/jiffingwalter/',
+		'website_link'=>'https://jiffingwalter.github.io/inf286-jwalterscribbles/',
+		'summary'=>'My name is Justin Walter and I\'m an NKU senior going for a major in CIT and a minor in Media Informatics. I like to play video games, hike, work out, climb, draw. I\'m currently interning at Great American insurance for my first internship as a programmer.',
 		'work_experience'=>[
-
+			'job_title'=>'Intern Developer',
+			'job_company'=>'Great American Insurance',
+			'job_description'=>'Working on "Techinical Knock-Out" team to solve both minor an major bugs in insurance program',
+			'job_workdate'=>'2023 - Present',
+			'job_achievements'=>['#1', 'Best cat award', 'Only confused some of the time'],
+			'job_technologies'=>[
+				'Java', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular', 'Git'	
+			]
 		],
 		'education'=>[
-
-			'edu_degree'=>'Associate of Arts',
+			['edu_degree'=>'Associate of Arts',
 			'edu_college'=>'Gateway Community & Technical College',
-			'edu_date'=>'2017-2020',
+			'edu_date'=>'2017-2020'],
+			['edu_degree'=>'Computer Information Technology Major',
+			'edu_college'=>'Northern Kentucky University',
+			'edu_date'=>'2020-2023'],
+			['edu_degree'=>'Media Informatics Minor',
+			'edu_college'=>'Northern Kentucky University',
+			'edu_date'=>'2020-2023']
 		],
-		'skills'=>'',
-		'awards'=>'',
-		'languages'=>'',
-		'interests'=>'',
-		'projects'=>''
-
+		'skills'=>[
+			'skills_major'=>[
+				'Python'=>75,
+				'Java'=>60,
+				'Angular'=>60,
+				'HTML/CSS'=>70,
+				'UI/UX Design'=>70
+			],
+			'skills_minor'=>[
+				'JavaScript', 'TypeScript', 'Visual Design', '3D Modeling & Animation', 'Team player', 'Git'
+			],
+		],
+		'awards'=>[
+			'The Best Award'=>'It\'s the best one.',
+			'Most Awards Award'=>'The most awards awarded, ever.'
+		],
+		'languages'=>['English',''],
+		'interests'=>[
+			'Video Games and development', 'Art (sketching, 3D, video)', 'Outdoors'
+		],
+		'projects'=>[
+			[
+				'project_title'=>'CUBE UI/UX Design',
+				'project_description'=>'UI bug fixes and additions to Great American\'s insurance handling software',
+				'project_img'=>'assets/images/project_cube.png',
+				'project_url'=>'https://thisisconfidential.website'
+			]
+		]
 	],
-	[
+	[ # member 2 -- Bryce
 		'name'=>'Bryce Bien',
 		'role'=>'Intern Programmer',
 		'profile_picture'=>'./assets/images/profile_brycebien.jpg',
 		'email'=>'brycebien@gmail.com',
+		'linkedin_link'=>'',
+		'github_link'=>'',
+		'website_link'=>'',
 		'summary'=>'',
-		'work_experience'=>'',
-		'education'=>'',
-		'skills'=>'',
-		'awards'=>'',
-		'languages'=>'',
-		'interests'=>'',
-		'projects'=>''
-
+		'work_experience'=>[
+			'job_title'=>'',
+			'job_company'=>'',
+			'job_description'=>'',
+			'job_workdate'=>'',
+			'job_achievements'=>[''],
+			'job_technologies'=>[
+				''	
+			]
+		],
+		'education'=>[
+			['edu_degree'=>'',
+			'edu_college'=>'',
+			'edu_date'=>''],
+		],
+		'skills'=>[
+			'skills_major'=>[ # the number is gonna be the width of the progress bar thing
+				''=>100
+			],
+			'skills_minor'=>[
+				''
+			],
+		],
+		'awards'=>[
+			''
+		],
+		'languages'=>['English'],
+		'interests'=>[
+			''
+		],
+		'projects'=>[
+			[
+				'project_title'=>'',
+				'project_description'=>'',
+				'project_img'=>'',
+				'project_url'=>''
+			]
+		]
 	],
 ];
 
