@@ -68,46 +68,60 @@ $members=[
 		'role'=>'Intern Programmer',
 		'profile_picture'=>'./assets/images/profile_brycebien.jpg',
 		'email'=>'brycebien@gmail.com',
-		'linkedin_link'=>'',
-		'github_link'=>'',
-		'website_link'=>'',
-		'summary'=>'',
+		'linkedin_link'=>'https://www.linkedin.com/in/brycebien/',
+		'github_link'=>'https://github.com/brycebien',
+		'website_link'=>'https://brycebien.github.io/MyWebsite/',
+		'summary'=>'I am currently a junior studying Applied Software Engineering and Business at Northern Kentucky University. Thus far I have completed Object Oriented Programming I and II, Full-Stack Application Development, and Database Programming. As of the Fall 2023 semester I am enrolled in Cross-Platform Development, Human-Computer Interaction, Server-Side Programming, and Software Design.',
 		'work_experience'=>[
-			'job_title'=>'',
-			'job_company'=>'',
-			'job_description'=>'',
-			'job_workdate'=>'',
-			'job_achievements'=>[''],
+			'job_title'=>['Shift Lead', 'TEST JOB'],
+			'job_company'=>['United Dairy Farmers', 'TEST JOB COMPANY'],
+			'job_description'=>['Assist customers in ordering ice cream and checking out. Work in a coordinated team to complete orders in a timely manner.', 'TEST JOB DESC'],
+			'job_workdate'=>['2023 - Present', 'TEST JOB WORKDATE'],
+			'job_achievements'=>['Gained valuable customer service skills as well as more expeirence working as a team to complete tasks.','TEST JOB ACHIEVEMENTS'],
 			'job_technologies'=>[
-				''	
+				'Customer Service Skills',
+				'Team Management Skills'
 			]
 		],
 		'education'=>[
-			['edu_degree'=>'',
-			'edu_college'=>'',
-			'edu_date'=>''],
+			['edu_degree'=>'BS in Applied Software Engenerring',
+			'edu_college'=>'Northern Kentucky University',
+			'edu_date'=>'2021-2025'],
 		],
 		'skills'=>[
 			'skills_major'=>[ # the number is gonna be the width of the progress bar thing
-				''=>100
+				'Java'=>90,
+				'Dart/Flutter'=>0,
+				'JavaScript'=>98,
+				'Node.js'=>98,
+				'HTML/CSS'=>98
 			],
 			'skills_minor'=>[
-				''
+				'Git',
+				'Wireframing',
+				'Python',
+				'MySQL',
+				'Team Leadership',
+				'Teamwork',
+				'Customer Service'
 			],
 		],
 		'awards'=>[
-			''
+			'Outstanding Academic Achievement'=>'Dean\'s List Spring 2023 Semester at Northern Kentucky University'
 		],
 		'languages'=>['English'],
 		'interests'=>[
-			''
+			'Climbing',
+			'Snowboarding',
+			'Camping',
+			'Hiking'
 		],
 		'projects'=>[
 			[
-				'project_title'=>'',
-				'project_description'=>'',
-				'project_img'=>'',
-				'project_url'=>''
+				'project_title'=>'Midwest Music',
+				'project_description'=>'Final Assignment for Full-Stack Application Development. Created a concert review site with a team of two others.',
+				'project_img'=>'assets\images\project_midwestmusic.jpg',
+				'project_url'=>'https://github.com/AndrewOneal/MidwestMusic'
 			]
 		]
 	],
@@ -184,19 +198,22 @@ $members=[
 						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work Experience</h2>
 						    <div class="resume-section-content">
 							    <div class="resume-timeline position-relative">
-								    <article class="resume-timeline-item position-relative pb-5">
+								<?php
+								for($i=0;$i<count($members[$index]['work_experience']);$i++){
+
+									echo '<article class="resume-timeline-item position-relative pb-5">
 									    
 									    <div class="resume-timeline-item-header mb-2">
 										    <div class="d-flex flex-column flex-md-row">
-										        <h3 class="resume-position-title font-weight-bold mb-1">Lead Developer</h3>
-										        <div class="resume-company-name ms-auto">Startup Hub</div>
+										        <h3 class="resume-position-title font-weight-bold mb-1">'.$members[$index]['work_experience']['job_title'][$i].'</h3>
+										        <div class="resume-company-name ms-auto">'.$members[$index]['work_experience']['job_company'][$i].'</div>
 										    </div><!--//row-->
-										    <div class="resume-position-time">2023 - Present</div>
+										    <div class="resume-position-time">'.$members[$index]['work_experience']['job_workdate'][$i].'</div>
 									    </div><!--//resume-timeline-item-header-->
 									    <div class="resume-timeline-item-desc">
-										    <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel.</p>
+										    <p>'.$members[$index]['work_experience']['job_description'][$i].'</p>
 										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-										    <p>Praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+										    <p>'.$members[$index]['work_experience']['job_achievements'][$i].'</p>
 										    <ul>
 											    <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
 											    <li>At vero eos et accusamus et iusto odio dignissimos.</li>
@@ -214,7 +231,9 @@ $members=[
 										    </ul>
 									    </div><!--//resume-timeline-item-desc-->
 
-								    </article><!--//resume-timeline-item-->
+								    </article><!--//resume-timeline-item-->';
+								}
+								?>
 								    
 								    <article class="resume-timeline-item position-relative pb-5">
 									    
