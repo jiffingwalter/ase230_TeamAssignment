@@ -47,8 +47,16 @@ $members=[
 			],
 		],
 		'awards'=>[
-			'title'=>['Outstanding Academic Achievement'],
-			'desc'=>['Dean\'s List Spring 2023 Semester at Northern Kentucky University']
+			'title'=>[
+				'GCTC Dean\'s list',
+				'President\'s Honor List',
+				'NKU Dean\'s list'
+			],
+			'desc'=>[
+				'Dean\'s list for the 2019 Fall semester at Gateway Community College,',
+				'President\'s honor list for the 2022 Spring semester at NKU',
+				'Dean\'s list for the 2021 Spring and Fall semesters at NKU'
+			]
 		],
 		'languages'=>[
 			'lang'=>['English'],
