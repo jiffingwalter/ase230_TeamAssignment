@@ -1,8 +1,6 @@
 <?php
 $index=$_GET['index'];
 
-# if statement here to choose which member to display based on the number given in the GET variable?
-
 $members=[
 	[ # member 1 -- justin
 		'name'=>'Justin Walter',
@@ -12,15 +10,16 @@ $members=[
 		'linkedin_link'=>'https://www.linkedin.com/in/justin-walter-b0a804244/',
 		'github_link'=>'https://github.com/jiffingwalter/',
 		'website_link'=>'https://jiffingwalter.github.io/inf286-jwalterscribbles/',
+		'phone_num'=>'(859)412-8115',
 		'summary'=>'My name is Justin Walter and I\'m an NKU senior going for a major in CIT and a minor in Media Informatics. I like to play video games, hike, work out, climb, draw. I\'m currently interning at Great American insurance for my first internship as a programmer.',
 		'work_experience'=>[
-			'job_title'=>'Intern Developer',
-			'job_company'=>'Great American Insurance',
-			'job_description'=>'Working on "Techinical Knock-Out" team to solve both minor an major bugs in insurance program',
-			'job_workdate'=>'2023 - Present',
-			'job_achievements'=>['#1', 'Best cat award', 'Only confused some of the time'],
+			'job_title'=>['Intern Developer'],
+			'job_company'=>['Great American Insurance'],
+			'job_description'=>['Working on "Techinical Knock-Out" team to solve both minor an major bugs in insurance program'],
+			'job_workdate'=>['2023 - Present'],
+			'job_achievements'=>['Learning both technical and people skills', 'Applying knowledge learned in college toward real projects'],
 			'job_technologies'=>[
-				'Java', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular', 'Git'	
+				['Java', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular', 'Git']	
 			]
 		],
 		'education'=>[
@@ -36,21 +35,25 @@ $members=[
 		],
 		'skills'=>[
 			'skills_major'=>[
-				'Python'=>75,
-				'Java'=>60,
-				'Angular'=>60,
-				'HTML/CSS'=>70,
-				'UI/UX Design'=>70
+				'Python',
+				'Java',
+				'Angular',
+				'HTML/CSS',
+				'UI/UX Design'
 			],
+			'skills_progress'=>['75','60','60','70','70'],
 			'skills_minor'=>[
 				'JavaScript', 'TypeScript', 'Visual Design', '3D Modeling & Animation', 'Team player', 'Git'
 			],
 		],
 		'awards'=>[
-			'The Best Award'=>'It\'s the best one.',
-			'Most Awards Award'=>'The most awards awarded, ever.'
+			'title'=>['Outstanding Academic Achievement'],
+			'desc'=>['Dean\'s List Spring 2023 Semester at Northern Kentucky University']
 		],
-		'languages'=>['English',''],
+		'languages'=>[
+			'lang'=>['English'],
+			'use'=>['Native']
+		],
 		'interests'=>[
 			'Video Games and development', 'Art (sketching, 3D, video)', 'Outdoors'
 		],
@@ -60,6 +63,12 @@ $members=[
 				'project_description'=>'UI bug fixes and additions to Great American\'s insurance handling software',
 				'project_img'=>'assets/images/project_cube.png',
 				'project_url'=>'https://thisisconfidential.website'
+			],
+			[
+				'project_title'=>'Wood Hudson Redesign',
+				'project_description'=>'Reworked the Wood Hudson Cancer Research Lab website for final project of website design',
+				'project_img'=>'assets/images/project_woodhudson.png',
+				'project_url'=>'https://jiffingwalter.github.io/woodhudsonredesign/'
 			]
 		]
 	],
@@ -125,12 +134,12 @@ $members=[
 			'Hiking'
 		],
 		'projects'=>[
-			
-				'project_title'=>['Midwest Music'],
-				'project_description'=>['Final Assignment for Full-Stack Application Development. Created a concert review site with a team of two others.'],
-				'project_img'=>['assets\images\project_midwestmusic.jpg'],
-				'project_url'=>['https://github.com/AndrewOneal/MidwestMusic']
-			
+			[
+				'project_title'=>'Midwest Music',
+				'project_description'=>'Final Assignment for Full-Stack Application Development. Created a concert review site with a team of two others.',
+				'project_img'=>'assets\images\project_midwestmusic.jpg',
+				'project_url'=>'https://github.com/AndrewOneal/MidwestMusic'
+			],
 		]
 	],
 ];
@@ -225,7 +234,11 @@ $members=[
 									    <div class="resume-timeline-item-desc">
 										    <p>'.$members[$index]['work_experience']['job_description'][$i].'</p>
 										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-										    <p>'.$members[$index]['work_experience']['job_achievements'][$i].'</p>
+										    <ul>';
+												for($k=0;$k<count($members[$index]['work_experience']['job_achievements']);$k++){
+													echo '<li>',$members[$index]['work_experience']['job_achievements'][$k],'</li>';
+												}
+											'</ul>
 										    
 										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
 											
@@ -327,21 +340,20 @@ $members=[
 				<section class="resume-section experience-section mb-5">
 					<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Projects</h2>
 					<div class="row mt-4">
-
 						<?php 
-						for($i=0;$i<count($members[$index]['projects']['project_title']);$i++){
+						for($i=0;$i<count($members[$index]['projects']);$i++){
 							echo '
 							<div class="col-md-4">
 								<div class="card">
-									<img src="'.$members[$index]['projects']['project_img'][$i].'" alt="Project '.$i.'" class="card-img-top">
+									<img src="'.$members[$index]['projects'][$i]['project_img'].'" alt="Project '.$i.'" class="card-img-top">
 									<div class="card-body">
-										<h5 class="card-title">'.$members[$index]['projects']['project_title'][$i].'</h5>
-										<p class="card-text">'.$members[$index]['projects']['project_description'][$i].'</p>
-										<a href="'.$members[$index]['projects']['project_url'][$i].'" href="btn btn-outline-primary" >Go to link</a>
+										<h5 class="card-title">'.$members[$index]['projects'][$i]['project_title'].'</h5>
+										<p class="card-text">'.$members[$index]['projects'][$i]['project_description'].'</p>
+										<a href="'.$members[$index]['projects'][$i]['project_url'].'" href="btn btn-outline-primary" >Go to link</a>
 									</div>
 								</div>
 							</div>';
-						}						
+						}
 						?>
 					</div>
 				</section><!--//projects-section-->
