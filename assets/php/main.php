@@ -152,6 +152,12 @@ $members_list=[
 ];
 
 # FUNCTIONS
-
+function get_age($dob){
+    $age = 0;
+    for($i=0;$i<(intval(date('Y')) - $dob);$i++){
+        $age++;
+        echo ($age);
+    }
+};
 
 ?>
