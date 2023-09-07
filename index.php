@@ -1,18 +1,7 @@
 <?php
 $_GET;
-
-$members=[
-	[
-		'name'=>'Justin Walter',
-		'role'=>'Intern Programmer',
-		'profile_picture'=>'./assets/images/profile_justinwalter.jpg',
-	],
-	[
-		'name'=>'Bryce Bien',
-		'role'=>'Intern Programmer',
-		'profile_picture'=>'./assets/images/profile_brycebien.jpg',
-	],
-];
+require('assets/php/main.php');
+$members=$members_list;
 
 ?>
 <!DOCTYPE html>
