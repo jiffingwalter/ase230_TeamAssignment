@@ -102,7 +102,7 @@ $members=$members_list;
 										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
 											
 											<ul class="list-inline">';
-											for($j=0;$j<count($members[$index]['work_experience']['job_technologies'][$i]);$j++){
+											for($j=0;$j<count($members[$index]['work_experience']['job_technologies']);$j++){
 												echo '<li class="list-inline-item"><span class="badge bg-secondary badge-pill">'.$members[$index]['work_experience']['job_technologies'][$i][$j].'</span></li>';
 											}
 										echo' </ul>
