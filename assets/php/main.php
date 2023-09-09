@@ -163,7 +163,7 @@ function generateMember($members, $index){
 				<h3 class="card-title">'.$members[$index]['name'].'</h3>
 				<h5 class="card-text">'.$members[$index]['role'].'</h5>
 				<p class="card-text">'.$members[$index]['summary'].'</p>
-				<a href="detail.php/?index='.$index.'" href="btn btn-outline-primary" >See Full Profile</a>
+				<a href="detail.php?index='.$index.'" href="btn btn-outline-primary" >See Full Profile</a>
 			</div>
 		</div>
 	</div>';

@@ -33,34 +33,13 @@ $members=$members_list;
     <article class="resume-wrapper text-center position-relative">
 	    <div class="resume-wrapper-inner mx-auto text-start bg-white shadow-lg">
 		<h1 class="py-4 text-center">OUR AMAZING TEAM</h1>
+		<div class="row mt-4">
 		<?php
 			for($i=0;$i<count($members);$i++){
 				generateMember($members, $i);
 			}
 		?>
-			<?php 
-				// for($i=0;$i<count($members);$i++){
-				// echo 
-				// '<header class="resume-header pt-4 pt-md-0">
-				// 	<div class="row">
-				// 		<div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-				// 			<img class="picture" src="'.$members[$i]['profile_picture'].'" alt="" height="220px">
-				// 		</div>
-				// 		<!--//col-->
-				// 		<div class="col">
-				// 			<div class="row p-4 justify-content-center justify-content-md-between">
-				// 				<div class="primary-info col-auto">
-				// 					<h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">'.$members[$i]['name'].'</h1>
-				// 						<div class="title mb-3">'.$members[$i]['role'].'</div>
-				// 					<a href="detail.php?index='.$i.'" class="btn btn-secondary">See full profile</a>
-				// 				</div><!--//primary-info-->
-				// 					<div class="secondary-info col-auto mt-2"></div><!--//secondary-info-->
-				// 			</div><!--//row-->
-				// 		</div><!--//col-->
-				// 	</div><!--//row-->
-				// </header><br>';	
-			//}?>
-
+		</div>
     <footer class="footer text-center pt-2 pb-5">
 	    <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
         <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by Bryce Bien and Justin Walker</small>
