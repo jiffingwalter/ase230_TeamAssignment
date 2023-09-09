@@ -152,6 +152,23 @@ $members_list=[
 ];
 
 # FUNCTIONS
-
+function generateMember($members, $index){
+	?>
+	<?php
+	echo
+	'<div class="col-md-4">
+		<div class="card">
+			<img src="'.$members[$index]['profile_picture'].'" alt="Profile Picture" class="card-img-top">
+			<div class="card-body">
+				<h3 class="card-title">'.$members[$index]['name'].'</h3>
+				<h5 class="card-text">'.$members[$index]['role'].'</h5>
+				<p class="card-text">'.$members[$index]['summary'].'</p>
+				<a href="detail.php/?index='.$index.'" href="btn btn-outline-primary" >See Full Profile</a>
+			</div>
+		</div>
+	</div>';
+	?>
+<?php
+}
 
 ?>
