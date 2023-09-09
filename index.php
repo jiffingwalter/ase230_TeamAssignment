@@ -47,6 +47,7 @@ $members=$members_list;
 								<div class="primary-info col-auto">
 									<h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">'.$members[$i]['name'].'</h1>
 										<div class="title mb-3">'.$members[$i]['role'].'</div>
+										<div class="title mb-3"> Age: '.get_age($members[$i]['dob']).'</div>
 									<a href="detail.php?index='.$i.'" class="btn btn-secondary">See full profile</a>
 								</div><!--//primary-info-->
 									<div class="secondary-info col-auto mt-2"></div><!--//secondary-info-->

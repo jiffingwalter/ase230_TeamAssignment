@@ -10,8 +10,8 @@ $members_list=[
 		'github_link'=>'https://github.com/jiffingwalter/',
 		'website_link'=>'https://jiffingwalter.github.io/inf286-jwalterscribbles/',
 		'phone_num'=>'(859)412-8115',
-        'dob'=>intval(date('Y,',mktime(0, 0, 0, 1, 13, 1999))),
-		'summary'=>'My name is Justin Walter and I\'m an NKU senior going for a major in CIT and a minor in Media Informatics. I like to play video games, hike, work out, climb, draw. I\'m currently interning at Great American insurance for my first internship as a programmer.',
+        'dob'=>intval(date('Y,',mktime(0, 0, 0, 01, 13, 1999))),
+		'summary'=>'My name is Justin Walter and I\'m an NKU senior going for a major in CIT and a minor in Media Informatics. I like to play video games, hike, work out, climb, and draw. I\'m currently interning at Great American insurance for my first internship as a programmer.',
 		'work_experience'=>[
 			'job_title'=>['Intern Developer'],
 			'job_company'=>['Great American Insurance'],
@@ -89,7 +89,7 @@ $members_list=[
 		'github_link'=>'https://github.com/brycebien',
 		'website_link'=>'https://brycebien.github.io/MyWebsite/',
 		'phone_num'=>'(513)283-2332',
-        'dob'=>intval(date('Y,',mktime(0, 0, 0, 0, 0, 0))),
+        'dob'=>intval(date('Y,',mktime(0, 0, 0, 02, 16, 2003))),
 		'summary'=>'I am currently a junior studying Applied Software Engineering and Business at Northern Kentucky University. Thus far I have completed Object Oriented Programming I and II, Full-Stack Application Development, and Database Programming. As of the Fall 2023 semester I am enrolled in Cross-Platform Development, Human-Computer Interaction, Server-Side Programming, and Software Design.',
 		'work_experience'=>[
 			'job_title'=>['Shift Lead', 'Lead Line Cook', 'Ski Technition'],
@@ -158,8 +158,8 @@ function get_age($dob){
     $age = 0;
     for($i=0;$i<(intval(date('Y')) - $dob);$i++){
         $age++;
-        echo ($age);
     }
+	return $age;
 };
 
 ?>
