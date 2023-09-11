@@ -33,7 +33,7 @@ $members=$members_list;
     <article class="resume-wrapper text-center position-relative">
 	    <div class="resume-wrapper-inner mx-auto text-start bg-white shadow-lg">
 		<h1 class="py-4 text-center">OUR AMAZING TEAM</h1>
-		<div class="row mt-4">
+		<div class="row mt-4" style='justify-content:center'>
 		<?php
 			for($i=0;$i<count($members);$i++){
 				generateMember($members, $i);
