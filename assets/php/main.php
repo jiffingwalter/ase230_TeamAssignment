@@ -10,7 +10,8 @@ $members_list=[
 		'github_link'=>'https://github.com/jiffingwalter/',
 		'website_link'=>'https://jiffingwalter.github.io/inf286-jwalterscribbles/',
 		'phone_num'=>'(859)412-8115',
-		'summary'=>'My name is Justin Walter and I\'m an NKU senior going for a major in CIT and a minor in Media Informatics. I like to play video games, hike, work out, climb, draw. I\'m currently interning at Great American insurance for my first internship as a programmer.',
+        'dob'=>intval(date('Y,',mktime(0, 0, 0, 01, 13, 1999))),
+		'summary'=>'My name is Justin Walter and I\'m an NKU senior going for a major in CIT and a minor in Media Informatics. I like to play video games, hike, work out, climb, and draw. I\'m currently interning at Great American insurance for my first internship as a programmer.',
 		'work_experience'=>[
 			'job_title'=>['Intern Developer'],
 			'job_company'=>['Great American Insurance'],
@@ -88,6 +89,7 @@ $members_list=[
 		'github_link'=>'https://github.com/brycebien',
 		'website_link'=>'https://brycebien.github.io/MyWebsite/',
 		'phone_num'=>'(513)283-2332',
+        'dob'=>intval(date('Y,',mktime(0, 0, 0, 02, 16, 2003))),
 		'summary'=>'I am currently a junior studying Applied Software Engineering and Business at Northern Kentucky University. Thus far I have completed Object Oriented Programming I and II, Full-Stack Application Development, and Database Programming. As of the Fall 2023 semester I am enrolled in Cross-Platform Development, Human-Computer Interaction, Server-Side Programming, and Software Design.',
 		'work_experience'=>[
 			'job_title'=>['Shift Lead', 'Lead Line Cook', 'Ski Technition'],
@@ -152,6 +154,14 @@ $members_list=[
 ];
 
 # FUNCTIONS
+function get_age($dob){
+    $age = 0;
+    for($i=0;$i<(intval(date('Y')) - $dob);$i++){
+        $age++;
+    }
+	return $age;
+};
+
 function generateMember($members, $index){
 	?>
 	<div class="col-md-4">
@@ -160,7 +170,7 @@ function generateMember($members, $index){
 			<div class="card-body">
 				<h3 class="card-title"><?=$members[$index]['name']?></h3>
 				<h4 class="card-text"><?=$members[$index]['role']?></h4>
-				<h5 class="card-text"><?php echo'Age: Insert Age Function Here';?></h5>
+				<h5 class="card-text">Age: <?php echo get_age($members[$index]['dob']);?></h5>
 				<p class="card-text"><?=$members[$index]['summary']?></p>
 				<a href="detail.php?index=<?=$index?>" href="btn btn-outline-primary" >See Full Profile</a>
 			</div>

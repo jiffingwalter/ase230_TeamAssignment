@@ -43,7 +43,8 @@ $members=$members_list;
 					    <div class="row p-4 justify-content-center justify-content-md-between">
 						    <div class="primary-info col-auto">
 							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?php echo $members[$index]['name'];?></h1>
-							    <div class="title mb-3"><?php echo $members[$index]['role'];?></div>
+							    <div class="title mb-1"><?php echo $members[$index]['role'];?></div>
+								<div class="title mb-1">Age: <?php echo get_age($members[$index]['dob'])?></div>
 							    <ul class="list-unstyled">
 								    <li class="mb-2"><a class="text-link" href="<?php echo 'mailto: '.$members[$index]['email'] ?>"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-3"></i><?php echo $members[$index]['email']; ?></a></li>
 								    <li><a class="text-link" href="#"><i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"></i><?php echo $members[$index]['phone_num'];?></a></li>
