@@ -152,6 +152,55 @@ $members_list=[
 ];
 
 # FUNCTIONS
+function generateMember($members, $index){
+	?>
+	<div class="col-md-4">
+		<div class="card">
+			<img src="<?=$members[$index]['profile_picture']?>" alt="Profile Picture" class="card-img-top">
+			<div class="card-body">
+				<h3 class="card-title"><?=$members[$index]['name']?></h3>
+				<h4 class="card-text"><?=$members[$index]['role']?></h4>
+				<h5 class="card-text"><?php echo'Age: Insert Age Function Here';?></h5>
+				<p class="card-text"><?=$members[$index]['summary']?></p>
+				<a href="detail.php?index=<?=$index?>" href="btn btn-outline-primary" >See Full Profile</a>
+			</div>
+		</div>
+	</div>
+	<?php
+}
 
-
+function generateWorkExp($exp){
+	for($i=0;$i<count($exp['job_title']);$i++){
+		?>
+		<article class="resume-timeline-item position-relative pb-5">
+		<div class="resume-timeline-item-header mb-2">
+			<div class="d-flex flex-column flex-md-row">
+				<h3 class="resume-position-title font-weight-bold mb-1"><?=$exp['job_title'][$i]?></h3>
+				<div class="resume-company-name ms-auto"><?=$exp['job_company'][$i]?></div>
+			</div><!--//row-->
+			<div class="resume-position-time"><?=$exp['job_workdate'][$i]?></div>
+		</div><!--//resume-timeline-item-header-->
+		<div class="resume-timeline-item-desc">
+			<p><?=$exp['job_description'][$i]?></p>
+			<h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
+			<ul>
+				<?php
+				for($k=0;$k<count($exp['job_achievements']);$k++){
+					echo '<li>',$exp['job_achievements'][$k],'</li>';
+				}
+				?>
+			</ul>
+			<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
+			<ul class="list-inline">
+				<?php
+				for($j=0;$j<count($exp['job_technologies'][$i]);$j++){
+					echo '<li class="list-inline-item"><span class="badge bg-secondary badge-pill">'.$exp['job_technologies'][$i][$j].'</span></li>';
+				}
+				?>
+			</ul>
+		</div><!--//resume-timeline-item-desc-->
+		</article><!--//resume-timeline-item-->
+		<?php
+	}
+}
 ?>

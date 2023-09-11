@@ -79,36 +79,7 @@ $members=$members_list;
 						    <div class="resume-section-content">
 							    <div class="resume-timeline position-relative">
 								<?php
-								for($i=0;$i<count($members[$index]['work_experience']['job_title']);$i++){
-
-									echo '<article class="resume-timeline-item position-relative pb-5">
-									    
-									    <div class="resume-timeline-item-header mb-2">
-										    <div class="d-flex flex-column flex-md-row">
-										        <h3 class="resume-position-title font-weight-bold mb-1">'.$members[$index]['work_experience']['job_title'][$i].'</h3>
-										        <div class="resume-company-name ms-auto">'.$members[$index]['work_experience']['job_company'][$i].'</div>
-										    </div><!--//row-->
-										    <div class="resume-position-time">'.$members[$index]['work_experience']['job_workdate'][$i].'</div>
-									    </div><!--//resume-timeline-item-header-->
-									    <div class="resume-timeline-item-desc">
-										    <p>'.$members[$index]['work_experience']['job_description'][$i].'</p>
-										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-										    <ul>';
-												for($k=0;$k<count($members[$index]['work_experience']['job_achievements']);$k++){
-													echo '<li>',$members[$index]['work_experience']['job_achievements'][$k],'</li>';
-												}
-											'</ul>
-										    
-										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-											
-											<ul class="list-inline">';
-											for($j=0;$j<count($members[$index]['work_experience']['job_technologies']);$j++){
-												echo '<li class="list-inline-item"><span class="badge bg-secondary badge-pill">'.$members[$index]['work_experience']['job_technologies'][$i][$j].'</span></li>';
-											}
-										echo' </ul>
-									    </div><!--//resume-timeline-item-desc-->
-								    </article><!--//resume-timeline-item-->';
-								}
+									generateWorkExp($members[$index]['work_experience']);
 								?>
 						    </div>
 					    </section><!--//projects-section-->
